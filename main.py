@@ -56,10 +56,13 @@ class ElectricEngine(Engine):
 
 class HybridEngine(Engine):
     def start(self):
-        print('Гибридный двигатель включён.')
-
+        fuel = int(input('Сколько литров бензина у вас в баке?'))
+        if fuel <= 10:
+            print('Гибридный двигатель запущен. Включён режим энерго-потребления.')
+        else:
+            print('Гибридный двигатель запущен. Включён режим потребления топлива.')
     def stop(self):
-        print('Гибридный двигатель выключен.')
+        print('Гибридный двигатель отключён.')
 
 def user_usage(abstraction: Vehicle):
     abstraction.drive()
